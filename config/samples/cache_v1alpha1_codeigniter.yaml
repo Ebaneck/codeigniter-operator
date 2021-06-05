@@ -1,0 +1,7 @@
+apiVersion: cache.codeigniter.com/v1alpha1
+kind: Codeigniter
+metadata:
+  name: codeigniter-sample
+spec:
+  # Add fields here
+  foo: bar

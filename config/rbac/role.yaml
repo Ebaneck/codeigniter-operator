@@ -37,4 +37,21 @@ rules:
       - patch
       - update
       - watch
+  ##
+  ## Rules for cache.codeigniter.com/v1alpha1, Kind: Codeigniter
+  ##
+  - apiGroups:
+      - cache.codeigniter.com
+    resources:
+      - codeigniters
+      - codeigniters/status
+      - codeigniters/finalizers
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
 #+kubebuilder:scaffold:rules

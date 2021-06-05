@@ -1,0 +1,20 @@
+# permissions for end users to view codeigniters.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: codeigniter-viewer-role
+rules:
+- apiGroups:
+  - cache.codeigniter.com
+  resources:
+  - codeigniters
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - cache.codeigniter.com
+  resources:
+  - codeigniters/status
+  verbs:
+  - get

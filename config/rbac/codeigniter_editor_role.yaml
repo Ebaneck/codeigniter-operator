@@ -1,0 +1,24 @@
+# permissions for end users to edit codeigniters.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: codeigniter-editor-role
+rules:
+- apiGroups:
+  - cache.codeigniter.com
+  resources:
+  - codeigniters
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - cache.codeigniter.com
+  resources:
+  - codeigniters/status
+  verbs:
+  - get
